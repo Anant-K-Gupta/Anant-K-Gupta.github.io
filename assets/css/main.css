@@ -99,7 +99,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #a2a2a2;
+		color: #787878;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -122,8 +122,8 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #787878;
-		font-weight: 400;
+		color: #7b7b7b;
+		font-weight: 600;
 	}
 
 	em, i {
@@ -135,8 +135,8 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #787878;
-		font-weight: 400;
+		color: #7b7b7b;
+		font-weight: 600;
 		line-height: 1em;
 		margin: 0 0 1em 0;
 	}
@@ -2107,6 +2107,7 @@ input, select, textarea {
 			float: left;
 			margin: 0 1.5em 1em 0;
 			top: 0.25em;
+			
 		}
 
 		.image.right {
@@ -2116,7 +2117,9 @@ input, select, textarea {
 		}
 
 		.image.left, .image.right {
-			max-width: 25%;
+			max-width: 20%;
+			object-fit: cover;
+			box-shadow: 10px 7px 25px rgb(243, 243, 243);
 		}
 
 			.image.left img, .image.right img {
@@ -2127,10 +2130,13 @@ input, select, textarea {
 			display: block;
 			margin: 0 0 2em 0;
 			width: 100%;
+			
 		}
 
 			.image.fit img {
 				width: 100%;
+				aspect-ratio: 16 / 9;
+				object-fit: cover;
 			}
 
 		.image.avatar {
@@ -2593,7 +2599,7 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		background-image: url("images/transparent.png"), url("../../images/bg5.jpg");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
@@ -3078,7 +3084,7 @@ input, select, textarea {
 			#footer {
 				background-attachment: scroll;
 				background-color: #1f1815;
-				background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+				background-image: url("images/transparent.png"), url("../../images/bg5.jpg");
 				background-position: top left,						bottom center;
 				background-repeat: repeat,							no-repeat;
 				background-size: auto,							cover;
