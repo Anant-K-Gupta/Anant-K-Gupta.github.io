@@ -2120,7 +2120,7 @@ input, select, textarea {
 			max-width: 20%;
 			object-fit: cover;
 			box-shadow: 10px 7px 25px rgb(243, 243, 243);
-			margin-bottom: 5em;
+			margin-bottom: 7em;
 		}
 
 			.image.left img, .image.right img {
