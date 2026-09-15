@@ -159,27 +159,6 @@ a.row:hover .tag{color:var(--accent-soft);border-color:color-mix(in srgb,var(--a
   transition:opacity .4s var(--ease),transform .4s var(--ease);color:var(--accent)}
 a.row:hover .arrow{opacity:1;transform:translateX(0)}
 
-/* ── Project preview ────────────────────────────────────────── */
-.shot{display:block;margin-top:.9rem;max-width:min(100%,19rem);
-  border:1px solid var(--rule);border-radius:3px;overflow:hidden;line-height:0}
-.shot img{width:100%;height:auto;display:block}
-
-@media (pointer:fine) and (min-width:720px){
-  .shot{
-    position:fixed;top:0;left:0;z-index:40;margin:0;width:17.5rem;max-width:none;
-    opacity:0;visibility:hidden;pointer-events:none;border-radius:4px;
-    box-shadow:0 18px 44px -18px rgba(0,0,0,.45);
-    transform:translate3d(var(--shx,0),var(--shy,0),0) scale(.95);
-    transition:opacity .32s var(--ease),transform .5s var(--ease),visibility 0s .32s;
-    will-change:transform;
-  }
-  html.motion a.row:hover .shot{
-    opacity:1;visibility:visible;
-    transform:translate3d(var(--shx,0),var(--shy,0),0) scale(1);
-    transition:opacity .32s var(--ease),transform .5s var(--ease),visibility 0s;
-  }
-}
-
 /* ── Footer ─────────────────────────────────────────────────── */
 footer{margin-top:clamp(3.5rem,9vh,5rem);padding-top:1.5rem;border-top:1px solid var(--rule);
   display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;align-items:center}
@@ -337,72 +316,73 @@ html.cursor-on body:has(a:hover) .cur-dot{opacity:.35}
   <section aria-labelledby="h-proj">
     <div class="shead rev" style="--i:0"><span class="mono" id="h-proj">Projects</span></div>
 
-    <a class="row rev" style="--i:1" href="https://github.com/DugaldMacintyre/Movie-Recommender" target="_blank" rel="noopener">
+    <a class="row rev" style="--i:1" href="https://github.com/Anant-K-Gupta/TTDS-CW3-Recipe-Search-Engine" target="_blank" rel="noopener">
+      <span class="yr">2025</span>
+      <div>
+        <h3>Recipe Search Engine<span class="arrow" aria-hidden="true">&rarr;</span></h3>
+        <p>A search engine over a scraped recipe corpus, built for Text Technologies for Data Science.
+          Flask and MongoDB behind a JavaScript front end, NLTK for tokenising and stemming, and a
+          marisa trie driving query autocomplete. Group project.</p>
+        <div class="tags"><span class="tag">Flask</span><span class="tag">MongoDB</span><span class="tag">NLTK</span><span class="tag">Docker</span></div>
+      </div>
+    </a>
+
+    <a class="row rev" style="--i:2" href="https://github.com/DugaldMacintyre/Movie-Recommender" target="_blank" rel="noopener">
       <span class="yr">2024</span>
       <div>
         <h3>Movie Recommender<span class="arrow" aria-hidden="true">&rarr;</span></h3>
         <p>Content-based and collaborative filtering over a ratings corpus, taking one film or several
           as the seed. Built with Dugald Macintyre.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">scikit-learn</span></div>
-        <span class="shot"><picture>
-          <source srcset="img/movie-recommender.avif" type="image/avif">
-          <img src="img/movie-recommender.webp" alt="" width="560" height="360" loading="lazy" decoding="async">
-        </picture></span>
       </div>
     </a>
 
-    <a class="row rev" style="--i:2" href="docs/autofold-report.pdf" target="_blank" rel="noopener">
+    <a class="row rev" style="--i:3" href="docs/autofold-report.pdf" target="_blank" rel="noopener">
       <span class="yr">2024</span>
       <div>
         <h3>AutoFold<span class="arrow" aria-hidden="true">&rarr;</span></h3>
         <p>An assistive clothes-folding rig on a Raspberry Pi and Pico, built for people with limited
           mobility. Read the report.</p>
         <div class="tags"><span class="tag">Raspberry Pi</span><span class="tag">Python</span><span class="tag">Motors</span></div>
-        <span class="shot"><picture>
-          <source srcset="img/autofold.avif" type="image/avif">
-          <img src="img/autofold.webp" alt="" width="560" height="360" loading="lazy" decoding="async">
-        </picture></span>
       </div>
     </a>
 
-    <a class="row rev" style="--i:3" href="https://github.com/Anant-K-Gupta/AirBnbProject" target="_blank" rel="noopener">
+    <a class="row rev" style="--i:4" href="https://github.com/Anant-K-Gupta/AirBnbProject" target="_blank" rel="noopener">
       <span class="yr">2023</span>
       <div>
         <h3>Airbnb Edinburgh<span class="arrow" aria-hidden="true">&rarr;</span></h3>
         <p>Price prediction across the city&rsquo;s listings &mdash; cleaning, PCA, and a nine-page
           write-up of what actually moves a nightly rate.</p>
         <div class="tags"><span class="tag">pandas</span><span class="tag">PCA</span><span class="tag">Seaborn</span></div>
-        <span class="shot"><picture>
-          <source srcset="img/airbnb.avif" type="image/avif">
-          <img src="img/airbnb.webp" alt="" width="560" height="360" loading="lazy" decoding="async">
-        </picture></span>
       </div>
     </a>
 
-    <a class="row rev" style="--i:4" href="https://github.com/Anant-K-Gupta/StockPortfolioSimulator" target="_blank" rel="noopener">
+    <a class="row rev" style="--i:5" href="https://github.com/Anant-K-Gupta/StockPortfolioSimulator" target="_blank" rel="noopener">
       <span class="yr">2023</span>
       <div>
         <h3>Portfolio Simulator<span class="arrow" aria-hidden="true">&rarr;</span></h3>
         <p>Simulated portfolios marked against a live price feed, built to learn how APIs and
           settlement actually behave.</p>
         <div class="tags"><span class="tag">Flask</span><span class="tag">SQLite</span><span class="tag">REST</span></div>
-        <span class="shot"><picture>
-          <source srcset="img/portfolio.avif" type="image/avif">
-          <img src="img/portfolio.webp" alt="" width="560" height="360" loading="lazy" decoding="async">
-        </picture></span>
       </div>
     </a>
 
-    <a class="row rev" style="--i:5" href="https://github.com/Anant-K-Gupta/Solar-System-2DSimulation" target="_blank" rel="noopener">
+    <div class="row rev" style="--i:6">
+      <span class="yr">2023</span>
+      <div>
+        <h3>Optiver Trading Bot</h3>
+        <p>A pair-trading strategy running an ETF against its constituents, written in a day at
+          HackTheBurg. Second place.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Pairs trading</span></div>
+      </div>
+    </div>
+
+    <a class="row rev" style="--i:7" href="https://github.com/Anant-K-Gupta/Solar-System-2DSimulation" target="_blank" rel="noopener">
       <span class="yr">2022</span>
       <div>
         <h3>Solar System<span class="arrow" aria-hidden="true">&rarr;</span></h3>
         <p>An n-body simulation in two dimensions, integrated with the three-step Beeman scheme.</p>
         <div class="tags"><span class="tag">NumPy</span><span class="tag">Matplotlib</span></div>
-        <span class="shot"><picture>
-          <source srcset="img/solarsystem.avif" type="image/avif">
-          <img src="img/solarsystem.webp" alt="" width="560" height="360" loading="lazy" decoding="async">
-        </picture></span>
       </div>
     </a>
   </section>
@@ -445,23 +425,20 @@ html.cursor-on body:has(a:hover) .cur-dot{opacity:.35}
       if(el.getBoundingClientRect().top<innerHeight) el.classList.add("in"); }); },900);
   }
 
-  /* cursor — one rAF loop drives the dot, the ring and the hover preview */
-  var mx=-100,my=-100,rx=-100,ry=-100,sx=-100,sy=-100,running=false;
-  var dot=document.querySelector(".cur-dot"), ring=document.querySelector(".cur-ring"), body=document.body;
+  /* cursor — dot pinned to the pointer, ring lerping behind it, one rAF loop */
+  var mx=-100,my=-100,rx=-100,ry=-100,running=false;
+  var dot=document.querySelector(".cur-dot"), ring=document.querySelector(".cur-ring");
 
   function frame(){
     rx+=(mx-rx)*0.16; ry+=(my-ry)*0.16;
-    sx+=(mx-sx)*0.11; sy+=(my-sy)*0.11;
     dot.style.setProperty("--cx",mx+"px"); dot.style.setProperty("--cy",my+"px");
     ring.style.setProperty("--rx",rx+"px"); ring.style.setProperty("--ry",ry+"px");
-    body.style.setProperty("--shx",(sx+26)+"px");
-    body.style.setProperty("--shy",(sy-118)+"px");
     requestAnimationFrame(frame);
   }
   function onMove(e){
     mx=e.clientX; my=e.clientY;
     if(root.classList.contains("kbd")) root.classList.remove("kbd");
-    if(!running){ running=true; rx=mx; ry=my; sx=mx; sy=my; requestAnimationFrame(frame); }
+    if(!running){ running=true; rx=mx; ry=my; requestAnimationFrame(frame); }
   }
   /* cursor:none is only ever applied by JS, so a script failure can't
      leave the visitor without a pointer */
