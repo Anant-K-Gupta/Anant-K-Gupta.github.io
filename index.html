@@ -132,6 +132,8 @@ section{margin-top:clamp(3.5rem,9vh,5.5rem)}
 .row.now .yr{color:var(--accent)}
 .row h3{font-size:1.12rem;line-height:1.32;letter-spacing:-0.012em}
 .row .where{font-family:var(--body);font-size:.95rem;color:var(--muted)}
+.row .earlier{font-family:var(--body);font-size:1rem;color:var(--muted)}
+.sep{margin-inline:.44em .4em;color:var(--faint)}
 .row p{font-size:.94rem;color:var(--muted);margin-top:.34rem;max-width:30rem}
 .tags{margin-top:.6rem;display:flex;flex-wrap:wrap;gap:.4rem}
 .tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;
@@ -232,7 +234,7 @@ html.cursor-on body:has(a:hover) .cur-dot{opacity:.35}
     </span>
     <span class="who">
       <h1 class="name">Anant Kumar Gupta</h1>
-      <span class="role">Engineer at <b>Marshall Wace</b> &middot; London</span>
+      <span class="role">Engineer at <b>Marshall Wace</b><span class="sep">&middot;</span>London</span>
     </span>
   </header>
 
@@ -252,7 +254,7 @@ html.cursor-on body:has(a:hover) .cur-dot{opacity:.35}
     <div class="row now rev" style="--i:1">
       <span class="yr">2025&nbsp;&mdash;</span>
       <div>
-        <h3>Marshall Wace <span class="where">&middot; London</span></h3>
+        <h3>Marshall Wace<span class="sep">&middot;</span><span class="where">London</span></h3>
         <p>Engineer on the graduate rotation. Four months per team &mdash; currently investment
           tooling, previously infrastructure and internal AI tooling.</p>
       </div>
@@ -261,7 +263,7 @@ html.cursor-on body:has(a:hover) .cur-dot{opacity:.35}
     <div class="row rev" style="--i:2">
       <span class="yr">2024</span>
       <div>
-        <h3>J.P. Morgan <span class="where">&middot; Glasgow</span></h3>
+        <h3>J.P. Morgan<span class="sep">&middot;</span><span class="where">Glasgow</span></h3>
         <p>Software engineering intern. Built a Symphony chatbot letting traders pull trade data with
           natural-language queries &mdash; Python and Java microservices behind OAuth, deployed on
           Kubernetes, tested to 70% coverage.</p>
@@ -280,7 +282,7 @@ html.cursor-on body:has(a:hover) .cur-dot{opacity:.35}
     <div class="row rev" style="--i:4">
       <span class="yr">2023</span>
       <div>
-        <h3>Institute for Computing Systems Architecture <span class="where">&middot; Edinburgh</span></h3>
+        <h3>Institute for Computing Systems Architecture<span class="sep">&middot;</span><span class="where">Edinburgh</span></h3>
         <p>Research intern under Prof. Vijay Nagarajan. Built a DSL for describing processors in
           Lean&nbsp;4, used it to construct a five-stage pipelined MIPS core, and set up the CI.</p>
       </div>
@@ -288,7 +290,7 @@ html.cursor-on body:has(a:hover) .cur-dot{opacity:.35}
 
     <div class="row rev" style="--i:5">
       <span class="yr">Earlier</span>
-      <div><h3 class="where" style="font-size:1rem">Centrum Wealth, New Delhi &middot; Tech Mahindra, Noida</h3></div>
+      <div><h3 class="earlier">Centrum Wealth, New Delhi<span class="sep">&middot;</span>Tech Mahindra, Noida</h3></div>
     </div>
   </section>
 
