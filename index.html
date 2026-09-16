@@ -265,7 +265,7 @@ html.cursor-on body:has(a:hover) .cur-dot{opacity:.35}
     <div class="shead rev" style="--i:0"><span class="mono" id="h-work">Work</span></div>
 
     <div class="row now rev" style="--i:1">
-      <span class="yr">2025-present<span class="dur">1 year</span></span>
+      <span class="yr">2025-present<span class="dur" data-since="2025-09">1 year</span></span>
       <div>
         <h3>Marshall Wace <span class="where">&middot; London</span></h3>
         <p>Software engineer on the graduate rotation, four months to a team. So far: the AI platform,
@@ -285,7 +285,7 @@ html.cursor-on body:has(a:hover) .cur-dot{opacity:.35}
     </div>
 
     <div class="row rev" style="--i:3">
-      <span class="yr">2024<span class="dur">3 months</span></span>
+      <span class="yr">2024-2024<span class="dur">3 months</span></span>
       <div>
         <h3>J.P. Morgan <span class="where">&middot; Glasgow</span></h3>
         <p>Software engineering intern in the Asset Management Engine Custody team. Built a Symphony
@@ -308,7 +308,7 @@ html.cursor-on body:has(a:hover) .cur-dot{opacity:.35}
     </div>
 
     <div class="row rev" style="--i:5">
-      <span class="yr">2023<span class="dur">6 months</span></span>
+      <span class="yr">2023-2023<span class="dur">6 months</span></span>
       <div>
         <h3>Institute for Computing Systems Architecture <span class="where">&middot; Edinburgh</span></h3>
         <p>Research intern under Prof. Vijay Nagarajan, working with two research associates on a
@@ -453,6 +453,21 @@ html.cursor-on body:has(a:hover) .cur-dot{opacity:.35}
     root.classList.add("cursor-on");
   }
   addEventListener("keydown",function(e){ if(e.key==="Tab") root.classList.add("kbd"); });
+
+  /* current role: work the duration out from the start month so it never goes stale.
+     The markup carries a correct fallback, so this only ever refines it. */
+  var since=document.querySelector(".dur[data-since]");
+  if(since){
+    var parts=since.getAttribute("data-since").split("-");
+    var start=new Date(+parts[0],+parts[1]-1,1), now=new Date();
+    var months=(now.getFullYear()-start.getFullYear())*12+(now.getMonth()-start.getMonth());
+    if(months>0){
+      var y=Math.floor(months/12), m=months%12, out=[];
+      if(y) out.push(y+(y===1?" year":" years"));
+      if(m) out.push(m+(m===1?" month":" months"));
+      if(out.length) since.textContent=out.join(" ");
+    }
+  }
 
   /* theme toggle */
   var btn=document.getElementById("themeBtn");
