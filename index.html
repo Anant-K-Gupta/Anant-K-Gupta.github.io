@@ -121,6 +121,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
   color:var(--faint);transition:color .3s var(--ease),background-color .3s var(--ease),transform .3s var(--ease)}
 .social a:hover{color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,transparent);transform:translateY(-2px)}
 .social svg{width:17px;height:17px;display:block;fill:currentColor}
+.social .cv{width:auto;height:28px;padding:0 .55rem;border:1px solid var(--rule);border-radius:3px;
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;margin-left:.35rem}
+.social .cv:hover{background:color-mix(in srgb,var(--accent) 10%,transparent);
+  border-color:color-mix(in srgb,var(--accent) 45%,var(--rule))}
 @media (max-width:520px){ .social{margin-left:0;width:100%;margin-top:.2rem} }
 
 .bio{font-size:clamp(1.05rem,2.5vw,1.16rem);line-height:1.6;max-width:33rem}
@@ -236,6 +240,7 @@ html.cursor-on body:has(a:hover) .cur-dot{opacity:.35}
       <a href="mailto:anantkgupta2003@gmail.com" aria-label="Email" title="Email">
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.75 2.5h12.5c.83 0 1.5.67 1.5 1.5v8c0 .83-.67 1.5-1.5 1.5H1.75c-.83 0-1.5-.67-1.5-1.5V4c0-.83.67-1.5 1.5-1.5Zm0 1.5v.4l6.25 3.75L14.25 4.4V4H1.75Zm12.5 2.15L8.39 9.66a.75.75 0 0 1-.78 0L1.75 6.15V12h12.5V6.15Z"/></svg>
       </a>
+      <a class="cv" href="docs/anant-gupta-cv.pdf" target="_blank" rel="noopener" title="Curriculum vitae (PDF)">CV</a>
     </nav>
   </header>
 
